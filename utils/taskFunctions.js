@@ -1,13 +1,25 @@
 // utils/taskFunction.js
-export const taskFunction = () => {
+export const taskFunction = (tasks) => {
+  if(!Array.isArray(tasks)){
+    throw new Error('Expected an array of tasks');
+  }
   //function implementation
+  tasks.forEach(task => {
+ console.log(`Task: ${task}`);
+
+  });
 };
 
 
 // Simulate fetching tasks from localStorage
 export const getTasks = () => {
-  const tasks = localStorage.getItem('tasks');
-  return tasks ? JSON.parse(tasks) : [];
+  try {
+    const tasks = localStorage.getItem('tasks');
+    return tasks ? JSON.parse(tasks) : [];
+  } catch (error) {
+ console.error('Failed to parse tasks from localStorage:', error);
+  return[];}
+  
 };
 
 // Simulate saving tasks to localStorage
@@ -16,7 +28,7 @@ const saveTasks = (tasks) => {
 };
 
 export const createNewTask = (task) => {
-  const tasks = getTasks(); // Retrieve existing tasks
+  const tasks = getTasks();// Retrieve existing tasks
   const newTask = { ...task, id: new Date().getTime() }; // Create new task with unique ID
   tasks.push(newTask); // Add new task to the array
   saveTasks(tasks); // Save updated tasks array to local storage
