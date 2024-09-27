@@ -16,12 +16,17 @@ console.log(initialData);
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
  const initialData = [];
+ try{
   if (!localStorage.getItem('tasks')) {
     localStorage.setItem('tasks', JSON.stringify(initialData)); 
     localStorage.setItem('showSideBar', 'true')
+      console.log('Initial data has been det in localStorage.');
   } else {
     console.log('Data already exists in localStorage');
   }
+ } catch (error){
+  console.error('Error accessing localStorage:',error);
+ }
 }
 
 // TASK: Get elements from the DOM
