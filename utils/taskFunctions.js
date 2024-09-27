@@ -1,4 +1,8 @@
 // utils/taskFunction.js
+export const taskFunction = () => {
+  //function implementation
+};
+
 
 // Simulate fetching tasks from localStorage
 export const getTasks = () => {
@@ -48,3 +52,4 @@ export const deleteTask = (id) => {
   // Previously: location.reload(); Now: We'll refresh the UI instead.
   return updatedTasks; // Optionally return the updated tasks list for further processing
 };
+
