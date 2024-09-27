@@ -15,6 +15,7 @@ console.log(initialData);
 
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
+ const initialData = [];
   if (!localStorage.getItem('tasks')) {
     localStorage.setItem('tasks', JSON.stringify(initialData)); 
     localStorage.setItem('showSideBar', 'true')
