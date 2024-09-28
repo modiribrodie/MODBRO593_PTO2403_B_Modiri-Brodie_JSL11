@@ -78,16 +78,24 @@ function displayBoards(boards) {
 function filterAndDisplayTasksByBoard(boardName) {
   const tasks = getTasks(); // Fetch tasks from a simulated local storage function
   const filteredTasks = tasks.filter(task => task.board === boardName);//'===' is used for comparison
-
+  displayTasks(filteredTasks);
+}
   // Ensure the column titles are set outside of this function or correctly initialized before this function runs
 
   elements.columnDivs.forEach(column => {
     const status = column.getAttribute("data-status");
+
+  //Checks if status is valid
+  if (status) {
     // Reset column content while preserving the column title
     column.innerHTML = `<div class="column-head-div">
                           <span class="dot" id="${status}-dot"></span>
                           <h4 class="columnHeader">${status.toUpperCase()}</h4>
                         </div>`;
+  } else {
+    console.warn("Column is missing an attribute.");
+  }
+});
 
     const tasksContainer = document.createElement("div");
     column.appendChild(tasksContainer);
