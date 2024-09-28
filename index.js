@@ -129,6 +129,12 @@ function styleActiveBoard(boardName) {
 
 
 function addTaskToUI(task) {
+  //Checks if  task and task.status are defined 
+ if (!task || !task.status) {
+  console.error('Invalid task or status is undefined');
+  return;
+ }
+
   const column = document.querySelector(`.column-div[data-status="${task.status}"]`); 
   if (!column) {
     console.error(`Column not found for status: ${task.status}`);
