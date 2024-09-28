@@ -146,13 +146,19 @@ function addTaskToUI(task) {
   } else {
     console.error('Column is undefined or null. Cannot find tasks container.');
   }
+ 
+ //Ensures taskContainer is a valid DOM element
+ const taskContainer = document.getElementById('tasks-container');
 
+  if (tasksContainer) {
   const taskElement = document.createElement('div');
   taskElement.className = 'task-div';
   taskElement.textContent = task.title; // Modify as needed
   taskElement.setAttribute('data-task-id', task.id);
   
   tasksContainer.appendChild(taskElement); 
+} else {
+console.error('Tasks container not found in the DOM.');
 }
 
 
