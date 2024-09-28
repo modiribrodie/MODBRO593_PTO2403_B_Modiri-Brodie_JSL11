@@ -160,11 +160,17 @@ function setupEventListeners() {
 }
 
   // Cancel adding new task event listener
+  document.addEventListener('DOMContentLoaded', () => {
   const cancelAddTaskBtn = document.getElementById('cancel-add-task-btn');
+  if (cancelAddTaskBtn) {
   cancelAddTaskBtn.addEventListener('click', () => {
     toggleModal(false);
     elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
   });
+} else {
+console.error('Cancel Add Task Button not found in the DOM.')
+}
+});
 
   // Clicking outside the modal to close it
   elements.filterDiv.addEventListener('click', () => {
