@@ -135,12 +135,16 @@ function addTaskToUI(task) {
     return;
   }
 
+  if (column) {
   let tasksContainer = column.querySelector('.tasks-container');
   if (!tasksContainer) {
     console.warn(`Tasks container not found for status: ${task.status}, creating one.`);
     tasksContainer = document.createElement('div');
     tasksContainer.className = 'tasks-container';
     column.appendChild(tasksContainer);
+  }
+  } else {
+    console.error('Column is undefined or null. Cannot find tasks container.');
   }
 
   const taskElement = document.createElement('div');
