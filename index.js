@@ -110,7 +110,11 @@ function filterAndDisplayTasksByBoard(boardName) {
 
 
 function refreshTasksUI() {
+  if (typeof activeBoard !== 'undefined' && activeBoard !== null) {
   filterAndDisplayTasksByBoard(activeBoard);
+} else {
+  console.error("Error: activeBoard is not defined or is null.");
+}
 }
 
 // Styles the active board by adding an active class
