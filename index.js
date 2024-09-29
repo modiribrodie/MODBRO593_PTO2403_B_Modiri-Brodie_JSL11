@@ -5,6 +5,7 @@ console.log(taskFunctions); //this logs the imported functions
 }catch (error) {
   console.error('Error importing taskFunctions:', error);
 }
+
 // import initialData
 import initialData from 'initialData.js'
 console.log(initialData);
@@ -27,7 +28,7 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
-document.getElementById('body');
+body : document.getElementById('body')
 
 };
 
@@ -372,14 +373,32 @@ const updatedTask = {
   };
 
   console.log(updatedTask);
-  
+
   // Update task using a helper function
  
 
   // Close the modal and refresh the UI to reflect the changes
+function closeModal() {
+    // Close the modal
+    const modal = document.getElementById('myModal');
+    if (modal) {
+        modal.style.display = 'none'; // Hide the modal
+    }
 
-  refreshTasksUI();
+    // Refresh the UI to reflect the changes
+    refreshUI();
 }
+
+function refreshUI() {
+    // Logic to refresh the UI
+    console.log('UI has been refreshed to reflect changes.');
+    // Additional code to update UI elements goes here
+}
+
+// Example of how to call closeModal when a button is clicked
+document.getElementById('closeButton').addEventListener('click', closeModal);
+  refreshTasksUI();
+
 
 /*************************************************************************************************************************************************/
 
