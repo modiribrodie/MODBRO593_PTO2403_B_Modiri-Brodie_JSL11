@@ -310,7 +310,32 @@ function openEditTaskModal(task) {
     console.log("Task changes have been saved.");
 }
   // Delete task using a helper function and close the task modal
-
+  function deleteTask(taskId) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const success = true; // Simulate success
+        if (success) {
+            console.log(`Task with ID ${taskId} deleted.`);
+            resolve();
+        } else {
+            reject('Error deleting task.');
+        }
+    }, 1000);
+});
+}
+// This Function to close the task modal
+function closeTaskModal() {
+  console.log('Task modal closed.');
+}   
+//function to handle task deletion and modal closure
+async function handleDeleteTask(taskId) {
+    try {
+        await deleteTask(taskId);
+        closeTaskModal();
+    } catch (error) {
+        console.error(error);
+    }
+}
 
   toggleModal(true, elements.editTaskModal); // Show the edit task modal
 }
