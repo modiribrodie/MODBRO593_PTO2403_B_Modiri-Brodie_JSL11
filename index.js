@@ -252,7 +252,7 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
- const sidebar = document.getElementById('side-bar');
+ const sidebar = document.getElementById('side-bar-div');
  if(show) {
   sidebar.style.display = 'block'; //shows the sidebar
  } else {
@@ -261,8 +261,9 @@ function toggleSidebar(show) {
 }
 
 function toggleTheme() {
- 
+ const body = document.body;
 }
+if()
 
 
 
