@@ -9,10 +9,6 @@ console.log(taskFunctions); //this logs the imported functions
 import initialData from 'initialData.js'
 console.log(initialData);
 
-/*************************************************************************************************************************************************
- * FIX BUGS!!!
- * **********************************************************************************************************************************************/
-
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
  const initialData = [];
@@ -224,7 +220,7 @@ console.error('Cancel Add Task Button not found in the DOM.')
 }
 
 // Toggles tasks modal
-// Task: Fix bugs
+
 function toggleModal(show, modal = elements.modalWindow) {
   modal.style.display = show ? 'block' : 'none'; 
 }
@@ -337,17 +333,47 @@ async function handleDeleteTask(taskId) {
     }
 }
 
-  toggleModal(true, elements.editTaskModal); // Show the edit task modal
+
+function toggleModal(isVisible, modalElement) {
+  if (isVisible) {
+      modalElement.style.display = 'block'; // Show the modal
+  } else {
+      modalElement.style.display = 'none'; // Hide the modal
+  }
 }
+  toggleModal(true, elements.editTaskModal); // Show the edit task modal
+
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
-  
+  const taskInput = document.getElementById(`task-input-${taskId}`).value;
+  const taskDescription = document.getElementById(`task-description-${taskId}`).value;
+
+  // Validate inputs
+  if (!taskInput || !taskDescription) {
+    console.error("Task input and description cannot be empty.");
+    return;
+  }
+  const updatedTask = {
+    id: taskId,
+    input: taskInput,
+    description: taskDescription
+  };
+
+  console.log("Task updated successfully:", updatedTask);
+}
 
   // Create an object with the updated task details
+const updatedTask = {
+    id: 1,
+    title: "Complete the project",
+    description: "Finish the project by the end of the week",
+    status: "In Progress",
+  };
 
-
-  // Update task using a hlper functoin
+  console.log(updatedTask);
+  
+  // Update task using a helper function
  
 
   // Close the modal and refresh the UI to reflect the changes
