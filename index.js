@@ -291,7 +291,17 @@ function openEditTaskModal(task) {
 }
 
   // Get button elements from the task modal
-
+  const taskModal = document.getElementById('taskModal'); // Ensure the modal exists
+  if (taskModal) {
+      const buttons = taskModal.querySelectorAll('button'); // Select all button elements
+      buttons.forEach(button => {
+          button.addEventListener('click', () => {
+              console.log(`Button ${button.textContent} clicked!`);
+          });
+      });
+  } else {
+      console.error('Task modal not found!');
+  }
 
   // Call saveTaskChanges upon click of Save Changes button
  
