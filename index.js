@@ -276,7 +276,19 @@ if (body.classList.contains ('dark-theme')) {
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-  
+  const titleInput = document.getElementById('edit-task-title-input');
+  const descriptionInput = document.getElementById('taskDescription');
+  const dueDateInput = document.getElementById('taskDueDate');
+
+  // Checks if task is defined
+  if (task) {
+    titleInput.value = task.title || '';
+    descriptionInput.value = task.description || '';
+    dueDateInput.value = task.dueDate ? new Date(task.dueDate).toISOString().split('T')[0] : '';
+  } else {
+    console.error('No task provided to edit.');
+  }
+}
 
   // Get button elements from the task modal
 
