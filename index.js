@@ -1,9 +1,10 @@
 // import helper functions from utils
-try{
-import {taskFunctions} from './utils/taskFunctions.js';
-console.log(taskFunctions); //this logs the imported functions
-}catch (error) {
-  console.error('Error importing taskFunctions:', error);
+import { taskFunctions } from './utils/taskFunctions.js';
+
+try {
+  console.log(taskFunctions); // this logs the imported functions
+} catch (error) {
+  console.error('Error using taskFunctions:', error);
 }
 
 // import initialData
