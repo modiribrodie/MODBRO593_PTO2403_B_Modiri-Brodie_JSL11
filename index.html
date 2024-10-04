@@ -17,49 +17,50 @@
 
 <body>
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-    <nav class="side-bar" id="side-bar-div">
-        <div id="side-logo-div">
-            <img id="logo" src="./assets/logo-dark.svg" alt="logo-dark">
-        </div>
+<nav class="side-bar" id="side-bar-div">
+    <div id="side-logo-div">
+        <img id="logo" src="./assets/logo-dark.svg" alt="logo-dark">
+    </div>
 
-        <div class="boards-nav-links-div" id="boards-nav-links-div">
-            <h4 id="headline-sidepanel">ALL BOARDS</h4>
+    <div class="boards-nav-links-div" id="boards-nav-links-div">
+        <h4 id="headline-sidepanel">ALL BOARDS</h4>
+    </div>
+    <div class="side-bar-bottom">
+        <div class="toggle-div">
+            <img src="./assets/icon-dark-theme.svg" id="icon-dark" alt="icon-dark-theme">
+            <input type="checkbox" id="switch" aria-label="Toggle between dark and light theme" />
+            <label for="switch" id="label-checkbox-theme">Toggle Theme</label>
+            <img src="./assets/icon-light-theme.svg" id="icon-light" alt="icon-light-theme">
         </div>
-        <div class="side-bar-bottom">
-            <div class="toggle-div">
-                <img src="./assets/icon-dark-theme.svg" id="icon-dark" alt="icon-dark-theme">
-                <input type="checkbox" id="switch" />
-                <label for="switch" id="label-checkbox-theme">Toggle Theme</label>
-                <img src="./assets/icon-light-theme.svg" id="icon-light" alt="icon-light-theme">
-            </div>
-            <div class="hide-side-bar-div">
-                <img src="./assets/icon-hide-sidebar.svg" alt="icon-hide-sidebar">
-                <button id="hide-side-bar-btn">Hide Sidebar</button>
-            </div>
+        <div class="hide-side-bar-div">
+            <img src="./assets/icon-hide-sidebar.svg" alt="icon-hide-sidebar">
+            <button id="hide-side-bar-btn">Hide Sidebar</button>
         </div>
-    </nav>
-    <button id="show-side-bar-btn" aria-label="Show Sidebar">
-        <img src="./assets/icon-show-sidebar.svg" alt="icon-show-sidebar">
-    </button>
+    </div>
+</nav>
+<button id="show-side-bar-btn" aria-label="Show Sidebar">
+    <img src="./assets/icon-show-sidebar.svg" alt="icon-show-sidebar">
+</button>
 
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
-    <div id="layout">
-        <header id="header" class="sticky-header">
-            <div class="header-name-div">
-                <img src="./assets/logo-mobile.svg" alt="logo-mobile" class="logo-mobile">
-                <h2 class="header-board-name" id="header-board-name"></h2>
-                <button class="dropdownBtn" id="dropdownBtn" aria-label="Open Dropdown Menu">
-                    <img src="./assets/icon-chevron-down.svg" alt="icon-chevron-down" class="icon-chevron-down" id="dropDownIcon">
-                </button>
-            </div>
-            <button id="add-new-task-btn" class="primary-btn">+ Add New Task</button>
-            <button class="edit-btn" id="edit-board-btn">
-                <p id="three-dots-icon">&#8942;</p>
+<div id="layout">
+    <header id="header" class="sticky-header">
+        <div class="header-name-div">
+            <img src="./assets/logo-mobile.svg" alt="logo-mobile" class="logo-mobile">
+            <h2 class="header-board-name" id="header-board-name"></h2>
+            <button class="dropdownBtn" id="dropdownBtn" aria-label="Open Dropdown Menu">
+                <img src="./assets/icon-chevron-down.svg" alt="icon-chevron-down" class="icon-chevron-down" id="dropDownIcon">
             </button>
-            <div id="editBoardDiv" class="editBtnsDiv">
-                <button class="editBtns" id="deleteBoardBtn">Delete Board</button>
-            </div>
-        </header>
+        </div>
+        <button id="add-new-task-btn" class="primary-btn">+ Add New Task</button>
+        <button class="edit-btn" id="edit-board-btn">
+            <p id="three-dots-icon">&#8942;</p>
+        </button>
+        <div id="editBoardDiv" class="editBtnsDiv">
+            <button class="editBtns" id="deleteBoardBtn">Delete Board</button>
+        </div>
+    </header>
+</div>
 
         <div class="container">
             <main class="card-column-main">
