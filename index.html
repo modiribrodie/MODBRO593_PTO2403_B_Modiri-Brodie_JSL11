@@ -65,34 +65,34 @@
             <main class="card-column-main">
                 <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
                 <div class="column-div" data-status="todo">
-                    <div id="todo-head-div" class="column-head-div">
-                        <span class="dot" id="todo-dot"></span>
-                        <h4 id="toDoText" class="columnHeader">TODO</h4>
+                    <div class="column-head-div">
+                        <span class="dot todo-dot"></span>
+                        <h4 class="toDoText columnHeader">TODO</h4>
                     </div>
                     <!-- Tasks container for TODO -->
                     <div class="tasks-container"></div>
                 </div>
                 <!-- DOING Column -->
                 <div class="column-div" data-status="doing">
-                    <div id="doing-head-div" class="column-head-div">
-                        <span class="dot" id="doing-dot"></span>
-                        <h4 id="doingText" class="columnHeader">DOING</h4>
+                    <div class="column-head-div">
+                        <span class="dot doing-dot"></span>
+                        <h4 class="doingText columnHeader">DOING</h4>
                     </div>
                     <!-- Tasks container for DOING -->
                     <div class="tasks-container"></div>
                 </div>
                 <!-- DONE Column -->
                 <div class="column-div" data-status="done">
-                    <div id="done-head-div" class="column-head-div">
-                        <span class="dot" id="done-dot"></span>
-                        <h4 id="doneText" class="columnHeader">DONE</h4>
+                    <div class="column-head-div">
+                        <span class="dot done-dot"></span>
+                        <h4 class="doneText columnHeader">DONE</h4>
                     </div>
                     <!-- Tasks container for DONE -->
                     <div class="tasks-container"></div>
                 </div>
             </main>
         </div>
-    </div>
+   
 
     <!-- New Task Modal: Form for adding a new task. -->
 <form class="modal-window" id="new-task-modal-window">
