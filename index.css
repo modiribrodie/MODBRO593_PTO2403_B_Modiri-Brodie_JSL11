@@ -27,20 +27,20 @@ body {
   min-height: 100vh;
   flex-direction: row;
   margin: 0;
-  /* border: 5px solid red; */
+  border: 5px solid red; 
   background-color: var(--secondary-color);
   box-sizing: border-box;
   width: 100%;
 }
 
 #layout {
-  /* position: fixed; */
-  /* height: 100%; */
+  position: fixed; 
+  height: 100%;
   width: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;
-  /* border: 2px solid green; */
+  border: 2px solid green; 
   overflow-x: hidden
 }
 
@@ -53,12 +53,12 @@ body {
   display: none;
   flex-direction: column;
   gap: 50px;
-  /* padding-left: 50px; */
+  padding-left: 50px; 
   padding-right: 20px;
   height: 100vh;
-  /* overflow-x: hidden; */
+  overflow-x: hidden; 
   margin-right: 0;
-  /* padding: 0 12px 0 26px; */
+  padding: 0 12px 0 26px;
   width: 350px;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 #create-board-btn {
-  /* order: -3; */
+  order: -3;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -126,6 +126,7 @@ body {
 .active .icon-board {
   filter: brightness(0) invert(1);
   /* Change the color of the icon to white */
+color : white;
 }
 
 #headline-sidepanel {
@@ -212,11 +213,11 @@ h4 {
 header {
   display: flex;
   justify-content: center;
-  justify-content: space-between;
+  /*justify-content: space-between; */
   align-items: center;
   background-color: var(--primary-color);
   height: 100px;
-  /* border: 5px solid rgb(29, 220, 237); */
+  border: 5px solid rgb(29, 220, 237);
   padding-left: 30px;
   padding-right: 35px;
   border-bottom: 0.1px solid #979797;
@@ -241,6 +242,9 @@ header {
   font-weight: 600;
   cursor: pointer;
   margin-right: 20px;
+  position:absolute;
+  top: 10px;
+  right:0; 
 }
 
 .container {
@@ -983,6 +987,7 @@ input:checked + #label-checkbox-theme:after {
   #add-new-task-btn {
     font-size: 0;
     padding: 12px;
+    
   }
 
   #editBoardDiv {
@@ -1145,18 +1150,18 @@ input:checked + #label-checkbox-theme:after {
   }
 
   #label-checkbox-theme {
-    /* width: 50px; */
-    /* height: 2px; */
+    width: 50px;
+    height: 2px; 
     right: 16px;
-    /* border: 2px solid yellow; */
+    border: 2px solid yellow;
   }
 
   #icon-dark {
     width: 20px;
     height: 20px;
     margin: 0;
-    /* margin-right: 20px; */
-    /* border: 2px solid blue; */
+    margin-right: 20px;
+    border: 2px solid blue;
   }
 
   #icon-light {
@@ -1174,7 +1179,7 @@ input:checked + #label-checkbox-theme:after {
     padding: 0;
     height: 60%;
     width: 60%;
-    /* border: 2px solid green; */
+    border: 2px solid green;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1184,19 +1189,19 @@ input:checked + #label-checkbox-theme:after {
     padding-top: 15px;
     border-radius: 10px;
     border-right: 0;
-    /* border: 2px solid green; */
+    border: 2px solid green;
     z-index: 10;
   }
 
   .container {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     height: auto;
     padding: 0;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     margin: 0;
     width: 100%;
     box-sizing: border-box;
-    /* border: 2px solid yellow; */
+     border: 2px solid yellow; 
   }
 
   .card-column-main {
@@ -1204,13 +1209,13 @@ input:checked + #label-checkbox-theme:after {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    /* border: 2px solid red; */
+     border: 2px solid red;
   }
 
   #header {
     top: 0;
     left: 0;
-    /* border: 2px solid white; */
+    border: 2px solid white;
     height: 80px;
     margin: 0;
     padding-left: 18px;
@@ -1222,7 +1227,7 @@ input:checked + #label-checkbox-theme:after {
     top: 17px;
     display: flex;
     right: 10px;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     padding: 0;
   }
 
@@ -1238,7 +1243,7 @@ input:checked + #label-checkbox-theme:after {
 
   #editBoardDiv {
     margin: 0;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     top: 85px;
     right: 10px;
     bottom: 0;
@@ -1268,15 +1273,15 @@ input:checked + #label-checkbox-theme:after {
   }
 
   .column-div {
-    /* padding: 18px; */
+    padding: 18px;
     width: 100%;
-    /* border: 2px solid rgb(93, 0, 255); */
-    /* box-sizing: border-box; */
+    border: 2px solid rgb(93, 0, 255);
+    box-sizing: border-box;
   }
 
   .task-div {
     height: 70px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
   }
 
   .modal-window {
@@ -1308,7 +1313,7 @@ input:checked + #label-checkbox-theme:after {
   }
 
   .container {
-    /* max-width: 100%;  */
+    max-width: 100%; 
     padding-left: 20px;
     padding-right: 20px;
   }
