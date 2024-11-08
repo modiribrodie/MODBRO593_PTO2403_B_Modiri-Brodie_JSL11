@@ -970,6 +970,7 @@ input:checked + #label-checkbox-theme:after {
     padding-left: 18px;
     padding-right: 10px;
     border: none;
+    
   }
 
   #edit-board-btn {
